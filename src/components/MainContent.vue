@@ -6,9 +6,32 @@ defineProps({
 })
 
 const count = ref(0)
-function changeContent() {
-  document.getElementById("playButton")
+
+const mouseDownVal = ref(0);
+const mouseUpVal = ref(0);
+const myLetter = ref("");
+
+
+function mouseDown() {
+  mouseDownVal.value = Date.now();
 }
+
+function mouseUp() {
+  mouseUpVal.value = Date.now();
+  checkLength();
+}
+function checkLength() {
+  const pressTime = mouseUpVal.value - mouseDownVal.value;
+
+  if (pressTime < 140 ) {
+    myLetter.value += ".";
+    console.log(".")
+  } else {
+    myLetter.value += "-";
+    console.log("-")
+  }
+}
+
 </script>
 
 <template>
@@ -24,18 +47,14 @@ function changeContent() {
     <div>
       <h2 id="question">A</h2>
     </div>
-    <input class="inputBox" type="text" value="">
+    <p id="inputBox">{{myLetter}}</p>
     <div>
-       <button class="flex" onclick="morseClick()">Space</button>
+      <button id="clicker" @mousedown="mouseDown" @mouseup="mouseUp" class="flex">Space</button>
     </div>
-    <div>
-      
-    </div>
-   
   </section>
-  <section id="gameOver">
+  <!-- <section id="gameOver">
 
-  </section>
+  </section> -->
 </template>
 
 <style scoped>
