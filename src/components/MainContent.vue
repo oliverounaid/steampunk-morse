@@ -12,23 +12,23 @@ const isOnline = true;
 const serverURL = "https://kak-socketio-server.herokuapp.com";
 // serverURL = "http://localhost:8000";
 
-if ( isOnline ) {
+if (isOnline) {
   const socket = io(serverURL);
-  
+
   socket.on("connect", () => {
     console.log("Client connected to: " + socket.id);
     // online = true;
   });
-  
+
   socket.on("send-data", res => {
     console.log(res);
-    if ("t" in res) { 
+    if ("t" in res) {
       signalCheck(res.t);
     }
   });
-  
+
   socket.on("disconnect", () => {
-    console.log("Client disconnected from" + socket.id); 
+    console.log("Client disconnected from" + socket.id);
   });
 }
 
@@ -38,7 +38,7 @@ const letters = alphabet.chars;
 const mouseDownVal = ref(0);
 const mouseUpVal = ref(0);
 const myLetter = ref("");
-let timeoutID ;
+let timeoutID;
 
 
 function mouseDown() {
@@ -55,14 +55,14 @@ function checkLength() {
   signalCheck(pressTime);
 }
 function signalCheck(pressTime) {
-  if (pressTime < 140 ) {
+  if (pressTime < 140) {
     myLetter.value += ".";
     // console.log(".")
   } else {
     myLetter.value += "-";
     // console.log("-")
   }
-  console.log(myLetter.value,letters[0].Q);
+  console.log(myLetter.value, letters[0].Q);
   if (letters[0].Q.startsWith(myLetter.value)) {
     console.log("correct")
   } else {
@@ -79,7 +79,7 @@ function endCheck() {
       document.getElementById("question").style.color = "#4ade80";
       myLetter.value = "";
     } else {
-      document.getElementById("question").style.color ="#ef4444"
+      document.getElementById("question").style.color = "#ef4444"
       console.log("try again")
       myLetter.value = "";
     }
