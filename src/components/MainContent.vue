@@ -62,8 +62,8 @@ function signalCheck(pressTime) {
     myLetter.value += "-";
     // console.log("-")
   }
-  console.log(myLetter.value,letters[0].A);
-  if (letters[0].A.startsWith(myLetter.value)) {
+  console.log(myLetter.value,letters[0].Q);
+  if (letters[0].Q.startsWith(myLetter.value)) {
     console.log("correct")
   } else {
     console.log("wrong")
@@ -74,7 +74,7 @@ function signalCheck(pressTime) {
 function endCheck() {
   timeoutID = setTimeout(() => {
     console.error("time up");
-    if (myLetter.value === letters[0].A) {
+    if (myLetter.value === letters[0].Q) {
       console.log("great success")
       document.getElementById("question").style.color = "#4ade80";
       myLetter.value = "";
@@ -98,7 +98,7 @@ function endCheck() {
   </section> -->
   <section id="gameMain" class="flex flex-col">
     <div class="flex h-15">
-      <h1 id="question" class="text-4xl">A</h1>
+      <h1 id="question" class="text-4xl">Q</h1>
     </div>
     <p id="inputBox" class="h-4"> {{myLetter}}</p>
     <div>
