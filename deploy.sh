@@ -4,7 +4,7 @@
 set -e
 
 # build
-npx vite build
+npm run build
 
 # navigate into the build output directory
 cd dist
