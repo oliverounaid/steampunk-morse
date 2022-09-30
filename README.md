@@ -8,7 +8,7 @@
 
 ## Links
 [Figma](https://www.figma.com/file/MVWVj8hugwqrng95VPtf4c/Morse)
-[Live](https://oliverounaid.github.com/steampunk-morse)
+[Live](https://oliverounaid.github.io/steampunk-morse)
 
 ## Members
 
