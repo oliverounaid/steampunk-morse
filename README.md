@@ -6,6 +6,9 @@
 
 ![board](./src/assets/img/Preview_Thumb.png)
 
+## Links
+[Figma]: https://www.figma.com/file/MVWVj8hugwqrng95VPtf4c/Morse
+
 ## Members
 
 * Jana
