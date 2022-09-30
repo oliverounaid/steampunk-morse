@@ -1,9 +1,8 @@
 # Steampunk-morse
 
 ## Morse code learning game for everyone
-![First idea](https://files.slack.com/files-pri/TUUFNUCSW-F0448RYM875/img_20220928_152443.jpg)
-![board](../steampunk-morse/src/assets/img/Preview_Thumb.png)
-
+![First idea](https://files.slack.com/files-pri/TUUFNUCSW-F0448RYM875/img_20220928_152443.jpg);.
+![board](./src/assets/img/Preview_Thumb.png);
 ## Members
 
 * Jana
