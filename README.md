@@ -26,11 +26,11 @@ Got together and got to know each other.
 Had a brainstorm and everyone got to tell their ideas.
 Decided on an idea and started to put together the plan.
 Started desinging in Figma and started to write the code.
-** Day 2
+## Day 2
 Made plan for day 2 and assigned tasks.
 Continue with Figma and code writing.
 Researching design for our game.
-## day 3
+## Day 3
 Started to write README.
 Made few design changes and corrections.
 # Team members comments
@@ -43,3 +43,5 @@ It´s hard to tell what knowledge I could use from this project for another one,
 I wish I could have been more useful.
 ## Raiko
 Mostly I learned about Morse code and how to use it. I got the change to learn and write README. I saw how the coding works on Visual Studio( HTML, JavaScript, CSS...) but it was really hard and needs lot of practise. Big part of the project we practised how to work together as a team.
+## Oliver 
+Got a chance to remind the basics of JavaScript. Also how to set up project on Git using Vite. 
