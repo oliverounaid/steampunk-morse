@@ -64,9 +64,9 @@ function signalCheck(pressTime) {
   }
   console.log(myLetter.value,letters[0].A);
   if (letters[0].A.startsWith(myLetter.value)) {
-    console.log("ok")
+    console.log("correct")
   } else {
-    console.log("not ok")
+    console.log("wrong")
   }
   clearTimeout(timeoutID);
   endCheck();
@@ -74,11 +74,14 @@ function signalCheck(pressTime) {
 function endCheck() {
   timeoutID = setTimeout(() => {
     console.error("time up");
-    // myLetter.value = "";
     if (myLetter.value === letters[0].A) {
       console.log("great success")
+      document.getElementById("question").style.color = "#4ade80";
+      myLetter.value = "";
     } else {
+      document.getElementById("question").style.color ="#ef4444"
       console.log("try again")
+      myLetter.value = "";
     }
   }, 2000);
 }
@@ -94,10 +97,10 @@ function endCheck() {
     <button id="playButton" type="button">Mängi!</button>
   </section> -->
   <section id="gameMain" class="flex flex-col">
-    <div>
-      <h2 id="question">A</h2>
+    <div class="flex h-15">
+      <h1 id="question" class="text-4xl">A</h1>
     </div>
-    <p id="inputBox"> {{myLetter}}</p>
+    <p id="inputBox" class="h-4"> {{myLetter}}</p>
     <div>
       <button id="clicker" @mousedown="mouseDown" @mouseup="mouseUp" class="flex">Space</button>
     </div>
